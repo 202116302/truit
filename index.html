@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Impact Bootstrap Template - Index</title>
+  <title>AI Sorting fruit</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/pepper.png" rel="icon">
+  <link href="assets/img/pepper.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,8 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
 </head>
 
 <body>
@@ -72,31 +74,31 @@
       <div class="container position-relative">
         <div class="row gy-4 mt-5">
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100" >
-            <div class="icon-box" >
+            <div class="icon-box" onclick="showDiv1()">
               <div class="icon"><img src="assets/img/bellpepper_red.png"></div>
-              <h4 class="title"><a href="" class="stretched-link">Red Bell Pepper</a></h4>
+              <h4 class="title text-white">Red Bell Pepper</h4>
              </div>
           </div>
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon-box">
+            <div class="icon-box" onclick="showDiv2()">
               <div class="icon"><img src="assets/img/bellpepper_green.png"></div>
-              <h4 class="title"><a href="" class="stretched-link">Green Bell Pepper</a></h4>
+              <h4 class="title text-white">Green Bell Pepper</h4>
             </div>
           </div>
           <!--End Icon Box -->
 
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon-box">
+            <div class="icon-box" onclick="showDiv3()">
               <div class="icon"><img src="assets/img/bellpepper_check.png"></div>
-              <h4 class="title"><a href="" class="stretched-link">Check</a></h4>
+              <h4 class="title text-white">Check</h4>
             </div>
           </div>
           <!--End Icon Box -->
 
           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
+            <div class="icon-box" onclick="showDiv4()">
               <div class="icon"><img src="assets/img/bellpepper_rot.png"></div>
-              <h4 class="title"><a href="" class="stretched-link">Rot</a></h4>
+              <h4 class="title text-white">Rot</h4>
             </div>
           </div>
           <!--End Icon Box -->
@@ -107,16 +109,45 @@
   </div>
   </section>
   <script>
-    function showDiv() {
+    function showDiv1() {
    document.getElementById('red').style.display = "block";
+   document.getElementById('green').style.display = "none";
+   document.getElementById('check').style.display = "none";
+   document.getElementById('rot').style.display = "none";
+}
+    function showDiv2() {
+   document.getElementById('green').style.display = "block";
+   document.getElementById('red').style.display = "none";
+   document.getElementById('check').style.display = "none";
+   document.getElementById('rot').style.display = "none";
+}
+    function showDiv3() {
+   document.getElementById('check').style.display = "block";
+   document.getElementById('red').style.display = "none";
+   document.getElementById('green').style.display = "none";
+   document.getElementById('rot').style.display = "none";
+
+}
+    function showDiv4() {
+   document.getElementById('rot').style.display = "block";
+   document.getElementById('green').style.display = "none";
+   document.getElementById('check').style.display = "none";
+   document.getElementById('red').style.display = "none";
+
 }
   </script>
   <main id="main">
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-        <video id="red" style="display:none;" width="320" height="240" controls>
+      <div class="container" data-aos="fade-up" align="center">
+        <video id="red" style="display:none;" width="800" height="600" controls>
           <source src="assets/video/red_bellpepper.mp4" type="video/mp4"></video>
+        <video id="green" style="display:none;" width="800" height="600" controls>
+          <source src="assets/video/green_bellpepper.mp4" type="video/mp4"></video>
+        <video id="check" style="display:none;" width="800" height="600" controls>
+          <source src="assets/video/check_bellpepper.mp4" type="video/mp4"></video>
+        <video id="rot" style="display:none;" width="800" height="600" controls>
+          <source src="assets/video/rot_bellpepper.mp4" type="video/mp4"></video>
       </div>
     </section><!-- End Contact Section -->
 
